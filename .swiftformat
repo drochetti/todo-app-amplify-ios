@@ -1,0 +1,5 @@
+# source options
+--header ""
+
+# file options
+--exclude Pods

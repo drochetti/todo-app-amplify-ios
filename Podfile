@@ -12,4 +12,7 @@ target 'TodoAmplify' do
   pod 'AmplifyPlugins/AWSAPIPlugin', :git => 'https://github.com/aws-amplify/amplify-ios.git', :branch => 'master'
   pod 'AmplifyPlugins/AWSDataStorePlugin', :git => 'https://github.com/aws-amplify/amplify-ios.git', :branch => 'master'
 
+  # Tooling
+  pod 'SwiftFormat/CLI'
+
 end

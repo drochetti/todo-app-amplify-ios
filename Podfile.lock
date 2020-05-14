@@ -31,6 +31,7 @@ PODS:
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
   - Starscream (3.0.6)
+  - SwiftFormat/CLI (0.44.10)
 
 DEPENDENCIES:
   - Amplify (from `https://github.com/aws-amplify/amplify-ios.git`, branch `master`)
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - AmplifyPlugins/AWSAPIPlugin (from `https://github.com/aws-amplify/amplify-ios.git`, branch `master`)
   - AmplifyPlugins/AWSDataStorePlugin (from `https://github.com/aws-amplify/amplify-ios.git`, branch `master`)
   - AWSPluginsCore (from `https://github.com/aws-amplify/amplify-ios.git`, branch `master`)
+  - SwiftFormat/CLI
 
 SPEC REPOS:
   https://cdn.cocoapods.org/:
@@ -50,6 +52,7 @@ SPEC REPOS:
     - ReachabilitySwift
     - SQLite.swift
     - Starscream
+    - SwiftFormat
 
 EXTERNAL SOURCES:
   Amplify:
@@ -86,7 +89,8 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  SwiftFormat: b72e592ea0979aeee53f6052abff291181364933
 
-PODFILE CHECKSUM: 748e905a4dbed6bf2ec09cc210e15c181d402dce
+PODFILE CHECKSUM: 572d7c657187dbfe990c8a5c6395c49984dc7606
 
 COCOAPODS: 1.9.1
