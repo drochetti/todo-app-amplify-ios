@@ -5,11 +5,6 @@ struct TodoListView: View {
 
     @EnvironmentObject var appState: AppState
     @State var todoDraft: String = ""
-    @State var isEditing: Bool = false
-
-    private var editButtonLabel: Text {
-        isEditing ? Text("Done").bold() : Text("Edit")
-    }
 
     // MARK: View Body
 
@@ -23,9 +18,6 @@ struct TodoListView: View {
             }
         }
         .navigationBarTitle(Text("My Todo List"))
-        .navigationBarItems(trailing: Button(action: self.onEdit) {
-            editButtonLabel
-        })
         .onAppear {
             self.appState.loadTodos()
         }
@@ -36,7 +28,7 @@ struct TodoListView: View {
     private func onAddTodo() {
         if !todoDraft.isEmpty {
             let name = todoDraft.trimmingCharacters(in: .whitespacesAndNewlines)
-            appState.createTodo(name) {
+            appState.createTodo(withName: name) {
                 switch $0 {
                 case .success:
                     self.todoDraft = ""
@@ -46,9 +38,5 @@ struct TodoListView: View {
                 }
             }
         }
-    }
-
-    private func onEdit() {
-        isEditing.toggle()
     }
 }

@@ -5,6 +5,8 @@ final class AppState: ObservableObject {
     @Published
     var todos: [Todo] = []
 
+    // MARK: Query
+
     func loadTodos() {
         DispatchQueue.main.async {
             Amplify.DataStore.query(Todo.self) {
@@ -19,8 +21,10 @@ final class AppState: ObservableObject {
         }
     }
 
+    // MARK: Save
+
     typealias CreateTodoResult = (Result<Void, Error>) -> Void
-    func createTodo(_ name: String, onResult: @escaping CreateTodoResult) {
+    func createTodo(withName name: String, onResult: @escaping CreateTodoResult) {
         let todo = Todo(name: name, done: false, priority: .normal)
         DispatchQueue.main.async {
             Amplify.DataStore.save(todo) {
@@ -49,6 +53,26 @@ final class AppState: ObservableObject {
                     }
                 case let .failure(error):
                     print("Error updating todo done status")
+                    print(error)
+                }
+            }
+        }
+    }
+
+    // MARK: Delete
+
+    func deleteTodo(withId id: String) {
+        DispatchQueue.main.async {
+            Amplify.DataStore.delete(Todo.self, withId: id) {
+                switch $0 {
+                case .success:
+                    if let index = self.todos.firstIndex(where: { $0.id == id }) {
+                        self.todos.remove(at: index)
+                    } else {
+                        print("Warning: could not find existing item with id \(id)")
+                    }
+                case let .failure(error):
+                    print("Error deleting todo")
                     print(error)
                 }
             }
