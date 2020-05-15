@@ -7,11 +7,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let isConfigured = configureAmplify()
-
-        if isConfigured {
-            loadSampleData()
-        }
-
         return isConfigured
     }
 
@@ -40,21 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error configuring Amplify!")
             print(error)
             return false
-        }
-    }
-
-    private func loadSampleData() {
-        let todo = Todo(name: "Sample Todo #1",
-                        done: false,
-                        priority: .high)
-        Amplify.DataStore.save(todo) {
-            switch $0 {
-            case .success:
-                print("Todo saved successfully!")
-            case let .failure(error):
-                print("Error saving a Todo")
-                print(error)
-            }
         }
     }
 }

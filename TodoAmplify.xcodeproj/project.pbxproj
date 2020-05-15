@@ -14,10 +14,11 @@
 		B03D18BBD32644FCB473BC22 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 25224A2F5CA9474F9B774C02 /* awsconfiguration.json */; };
 		B9D3F0E8246DFAED0039F662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F0E7246DFAED0039F662 /* AppDelegate.swift */; };
 		B9D3F0EA246DFAED0039F662 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F0E9246DFAED0039F662 /* SceneDelegate.swift */; };
-		B9D3F0EC246DFAED0039F662 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F0EB246DFAED0039F662 /* ContentView.swift */; };
 		B9D3F0EE246DFAEE0039F662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9D3F0ED246DFAEE0039F662 /* Assets.xcassets */; };
 		B9D3F0F1246DFAEE0039F662 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9D3F0F0246DFAEE0039F662 /* Preview Assets.xcassets */; };
 		B9D3F0F4246DFAEF0039F662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9D3F0F2246DFAEF0039F662 /* LaunchScreen.storyboard */; };
+		B9D3F101246E4B2E0039F662 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F100246E4B2E0039F662 /* AppState.swift */; };
+		B9D3F103246E4C440039F662 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F102246E4C440039F662 /* TodoListView.swift */; };
 		CAD97DC2ADC642C79D19B4B8 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23A69CD0904B46ABBE3B7A /* Priority.swift */; };
 		D8BCAEACA0FB6E82E665577E /* Pods_TodoAmplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA718BC6909C32F787A7DE51 /* Pods_TodoAmplify.framework */; };
 /* End PBXBuildFile section */
@@ -34,11 +35,12 @@
 		B9D3F0E4246DFAED0039F662 /* TodoAmplify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoAmplify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D3F0E7246DFAED0039F662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9D3F0E9246DFAED0039F662 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B9D3F0EB246DFAED0039F662 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B9D3F0ED246DFAEE0039F662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9D3F0F0246DFAEE0039F662 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9D3F0F3246DFAEF0039F662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9D3F0F5246DFAEF0039F662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9D3F100246E4B2E0039F662 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		B9D3F102246E4C440039F662 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		E5C772B0358F460AA4B458BD /* Todo+Schema.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "Todo+Schema.swift"; path = "amplify/generated/models/Todo+Schema.swift"; sourceTree = "<group>"; };
 		EA718BC6909C32F787A7DE51 /* Pods_TodoAmplify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoAmplify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA23A69CD0904B46ABBE3B7A /* Priority.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = amplify/generated/models/Priority.swift; sourceTree = "<group>"; };
@@ -112,13 +114,14 @@
 		B9D3F0E6246DFAED0039F662 /* TodoAmplify */ = {
 			isa = PBXGroup;
 			children = (
+				B9D3F0F5246DFAEF0039F662 /* Info.plist */,
 				B9D3F0E7246DFAED0039F662 /* AppDelegate.swift */,
 				B9D3F0E9246DFAED0039F662 /* SceneDelegate.swift */,
-				B9D3F0EB246DFAED0039F662 /* ContentView.swift */,
 				B9D3F0ED246DFAEE0039F662 /* Assets.xcassets */,
 				B9D3F0F2246DFAEF0039F662 /* LaunchScreen.storyboard */,
-				B9D3F0F5246DFAEF0039F662 /* Info.plist */,
 				B9D3F0EF246DFAEE0039F662 /* Preview Content */,
+				B9D3F0FF246E4B0F0039F662 /* State */,
+				B9D3F0FE246E4A180039F662 /* Views */,
 			);
 			path = TodoAmplify;
 			sourceTree = "<group>";
@@ -129,6 +132,22 @@
 				B9D3F0F0246DFAEE0039F662 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B9D3F0FE246E4A180039F662 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9D3F102246E4C440039F662 /* TodoListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9D3F0FF246E4B0F0039F662 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				B9D3F100246E4B2E0039F662 /* AppState.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 		C75D9DD619924577D999ABB5 /* Frameworks */ = {
@@ -296,8 +315,9 @@
 			files = (
 				B9D3F0E8246DFAED0039F662 /* AppDelegate.swift in Sources */,
 				B9D3F0EA246DFAED0039F662 /* SceneDelegate.swift in Sources */,
-				B9D3F0EC246DFAED0039F662 /* ContentView.swift in Sources */,
+				B9D3F101246E4B2E0039F662 /* AppState.swift in Sources */,
 				66DF85646ADC4E5581E45C27 /* AmplifyModels.swift in Sources */,
+				B9D3F103246E4C440039F662 /* TodoListView.swift in Sources */,
 				CAD97DC2ADC642C79D19B4B8 /* Priority.swift in Sources */,
 				59CE05E5B17E4628B2B66D8A /* Todo.swift in Sources */,
 				A41E400D377B4AC487613DD7 /* Todo+Schema.swift in Sources */,
