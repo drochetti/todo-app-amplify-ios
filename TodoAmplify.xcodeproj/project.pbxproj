@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59CE05E5B17E4628B2B66D8A /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3595DBA22F457BA17DEB35 /* Todo.swift */; };
-		66DF85646ADC4E5581E45C27 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D0A643954655B28A4D50 /* AmplifyModels.swift */; };
+		04AF36DF871F46BA8A4F6DD2 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858E7E71D784A9EA3DC4ED1 /* Todo.swift */; };
+		4549EB775AB54221B2E5BCF3 /* Todo+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825DAAD59551439393EF0AEF /* Todo+Schema.swift */; };
+		47E22E329454459593B1BAEF /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DA88B47F549D7ACDA4541 /* AmplifyModels.swift */; };
 		67E8F23E0DCA455ABC357FAA /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AD19C0CE432476A8D961DB1 /* amplifyconfiguration.json */; };
-		A41E400D377B4AC487613DD7 /* Todo+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C772B0358F460AA4B458BD /* Todo+Schema.swift */; };
 		B03D18BBD32644FCB473BC22 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 25224A2F5CA9474F9B774C02 /* awsconfiguration.json */; };
 		B9D3F0E8246DFAED0039F662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F0E7246DFAED0039F662 /* AppDelegate.swift */; };
 		B9D3F0EA246DFAED0039F662 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F0E9246DFAED0039F662 /* SceneDelegate.swift */; };
@@ -19,19 +19,21 @@
 		B9D3F0F4246DFAEF0039F662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9D3F0F2246DFAEF0039F662 /* LaunchScreen.storyboard */; };
 		B9D3F101246E4B2E0039F662 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F100246E4B2E0039F662 /* AppState.swift */; };
 		B9D3F103246E4C440039F662 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F102246E4C440039F662 /* TodoListView.swift */; };
-		CAD97DC2ADC642C79D19B4B8 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23A69CD0904B46ABBE3B7A /* Priority.swift */; };
+		C020556265C54E748EFD6FCD /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C732A8F91D44720A8E252E1 /* Priority.swift */; };
 		D8BCAEACA0FB6E82E665577E /* Pods_TodoAmplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA718BC6909C32F787A7DE51 /* Pods_TodoAmplify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00BB18A32DED4A7B948A7804 /* amplifytools.xcconfig */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.xcconfig; name = amplifytools.xcconfig; path = ./amplifytools.xcconfig; sourceTree = "<group>"; };
+		0C732A8F91D44720A8E252E1 /* Priority.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = amplify/generated/models/Priority.swift; sourceTree = "<group>"; };
 		25224A2F5CA9474F9B774C02 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = awsconfiguration.json; sourceTree = "<group>"; };
 		3B0A2681D34B2482FEA7ECBD /* Pods-TodoAmplify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoAmplify.release.xcconfig"; path = "Target Support Files/Pods-TodoAmplify/Pods-TodoAmplify.release.xcconfig"; sourceTree = "<group>"; };
 		4702CC5A04694CBF963E2C42 /* Pods-TodoAmplify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoAmplify.debug.xcconfig"; path = "Target Support Files/Pods-TodoAmplify/Pods-TodoAmplify.debug.xcconfig"; sourceTree = "<group>"; };
-		6909D0A643954655B28A4D50 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
 		6AD19C0CE432476A8D961DB1 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = amplifyconfiguration.json; sourceTree = "<group>"; };
-		8A3595DBA22F457BA17DEB35 /* Todo.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Todo.swift; path = amplify/generated/models/Todo.swift; sourceTree = "<group>"; };
+		780DA88B47F549D7ACDA4541 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
+		825DAAD59551439393EF0AEF /* Todo+Schema.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "Todo+Schema.swift"; path = "amplify/generated/models/Todo+Schema.swift"; sourceTree = "<group>"; };
 		8DF93209F53349E0A61B57EE /* schema.graphql */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text; name = schema.graphql; path = amplify/backend/api/amplifyDatasource/schema.graphql; sourceTree = "<group>"; };
+		B858E7E71D784A9EA3DC4ED1 /* Todo.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Todo.swift; path = amplify/generated/models/Todo.swift; sourceTree = "<group>"; };
 		B9D3F0E4246DFAED0039F662 /* TodoAmplify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoAmplify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D3F0E7246DFAED0039F662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9D3F0E9246DFAED0039F662 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,9 +43,7 @@
 		B9D3F0F5246DFAEF0039F662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9D3F100246E4B2E0039F662 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B9D3F102246E4C440039F662 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
-		E5C772B0358F460AA4B458BD /* Todo+Schema.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "Todo+Schema.swift"; path = "amplify/generated/models/Todo+Schema.swift"; sourceTree = "<group>"; };
 		EA718BC6909C32F787A7DE51 /* Pods_TodoAmplify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoAmplify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA23A69CD0904B46ABBE3B7A /* Priority.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = amplify/generated/models/Priority.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +82,10 @@
 		88F78A8A57A345AEB739A727 /* AmplifyModels */ = {
 			isa = PBXGroup;
 			children = (
-				6909D0A643954655B28A4D50 /* AmplifyModels.swift */,
-				FA23A69CD0904B46ABBE3B7A /* Priority.swift */,
-				8A3595DBA22F457BA17DEB35 /* Todo.swift */,
-				E5C772B0358F460AA4B458BD /* Todo+Schema.swift */,
+				780DA88B47F549D7ACDA4541 /* AmplifyModels.swift */,
+				0C732A8F91D44720A8E252E1 /* Priority.swift */,
+				B858E7E71D784A9EA3DC4ED1 /* Todo.swift */,
+				825DAAD59551439393EF0AEF /* Todo+Schema.swift */,
 			);
 			name = AmplifyModels;
 			path = .;
@@ -316,11 +316,11 @@
 				B9D3F0E8246DFAED0039F662 /* AppDelegate.swift in Sources */,
 				B9D3F0EA246DFAED0039F662 /* SceneDelegate.swift in Sources */,
 				B9D3F101246E4B2E0039F662 /* AppState.swift in Sources */,
-				66DF85646ADC4E5581E45C27 /* AmplifyModels.swift in Sources */,
 				B9D3F103246E4C440039F662 /* TodoListView.swift in Sources */,
-				CAD97DC2ADC642C79D19B4B8 /* Priority.swift in Sources */,
-				59CE05E5B17E4628B2B66D8A /* Todo.swift in Sources */,
-				A41E400D377B4AC487613DD7 /* Todo+Schema.swift in Sources */,
+				47E22E329454459593B1BAEF /* AmplifyModels.swift in Sources */,
+				C020556265C54E748EFD6FCD /* Priority.swift in Sources */,
+				04AF36DF871F46BA8A4F6DD2 /* Todo.swift in Sources */,
+				4549EB775AB54221B2E5BCF3 /* Todo+Schema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
