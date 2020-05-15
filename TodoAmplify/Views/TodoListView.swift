@@ -16,8 +16,10 @@ struct TodoListView: View {
     var body: some View {
         List {
             TextField("Enter a new todo...", text: $todoDraft, onCommit: self.onAddTodo)
+                .padding(.vertical, 12)
             ForEach(appState.todos, id: \.id) { todo in
-                Text(todo.name)
+                TodoItemView(todo: todo)
+                    .environmentObject(self.appState)
             }
         }
         .navigationBarTitle(Text("My Todo List"))

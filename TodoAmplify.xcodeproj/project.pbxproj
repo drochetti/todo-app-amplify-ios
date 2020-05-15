@@ -19,6 +19,7 @@
 		B9D3F0F4246DFAEF0039F662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9D3F0F2246DFAEF0039F662 /* LaunchScreen.storyboard */; };
 		B9D3F101246E4B2E0039F662 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F100246E4B2E0039F662 /* AppState.swift */; };
 		B9D3F103246E4C440039F662 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F102246E4C440039F662 /* TodoListView.swift */; };
+		B9DBBD57246E6FCA002A5571 /* TodoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DBBD56246E6FCA002A5571 /* TodoItemView.swift */; };
 		C020556265C54E748EFD6FCD /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C732A8F91D44720A8E252E1 /* Priority.swift */; };
 		D8BCAEACA0FB6E82E665577E /* Pods_TodoAmplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA718BC6909C32F787A7DE51 /* Pods_TodoAmplify.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		B9D3F0F5246DFAEF0039F662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9D3F100246E4B2E0039F662 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B9D3F102246E4C440039F662 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		B9DBBD56246E6FCA002A5571 /* TodoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemView.swift; sourceTree = "<group>"; };
 		EA718BC6909C32F787A7DE51 /* Pods_TodoAmplify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoAmplify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 		B9D3F0FE246E4A180039F662 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B9DBBD56246E6FCA002A5571 /* TodoItemView.swift */,
 				B9D3F102246E4C440039F662 /* TodoListView.swift */,
 			);
 			path = Views;
@@ -318,6 +321,7 @@
 				B9D3F101246E4B2E0039F662 /* AppState.swift in Sources */,
 				B9D3F103246E4C440039F662 /* TodoListView.swift in Sources */,
 				47E22E329454459593B1BAEF /* AmplifyModels.swift in Sources */,
+				B9DBBD57246E6FCA002A5571 /* TodoItemView.swift in Sources */,
 				C020556265C54E748EFD6FCD /* Priority.swift in Sources */,
 				04AF36DF871F46BA8A4F6DD2 /* Todo.swift in Sources */,
 				4549EB775AB54221B2E5BCF3 /* Todo+Schema.swift in Sources */,

@@ -34,4 +34,24 @@ final class AppState: ObservableObject {
             }
         }
     }
+
+    func toggleDone(on todo: Todo) {
+        var updatedTodo = todo
+        updatedTodo.done = !todo.done
+        DispatchQueue.main.async {
+            Amplify.DataStore.save(updatedTodo) {
+                switch $0 {
+                case .success:
+                    if let index = self.todos.firstIndex(where: { $0.id == todo.id }) {
+                        self.todos[index] = updatedTodo
+                    } else {
+                        print("Warning: could not find existing item with id \(todo.id)")
+                    }
+                case let .failure(error):
+                    print("Error updating todo done status")
+                    print(error)
+                }
+            }
+        }
+    }
 }
