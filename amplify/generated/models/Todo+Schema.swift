@@ -8,6 +8,7 @@ extension Todo {
     public enum CodingKeys: String, ModelKey {
         case id
         case name
+        case done
         case priority
         case description
     }
@@ -24,6 +25,7 @@ extension Todo {
         model.fields(
             .id(),
             .field(todo.name, is: .required, ofType: .string),
+            .field(todo.done, is: .required, ofType: .bool),
             .field(todo.priority, is: .optional, ofType: .enum(type: Priority.self)),
             .field(todo.description, is: .optional, ofType: .string)
         )
