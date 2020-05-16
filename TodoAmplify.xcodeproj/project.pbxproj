@@ -12,6 +12,7 @@
 		47E22E329454459593B1BAEF /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DA88B47F549D7ACDA4541 /* AmplifyModels.swift */; };
 		67E8F23E0DCA455ABC357FAA /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AD19C0CE432476A8D961DB1 /* amplifyconfiguration.json */; };
 		B03D18BBD32644FCB473BC22 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 25224A2F5CA9474F9B774C02 /* awsconfiguration.json */; };
+		B93D0FD8246F653D00796879 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D0FD7246F653D00796879 /* TodoViewModel.swift */; };
 		B9D3F0E8246DFAED0039F662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F0E7246DFAED0039F662 /* AppDelegate.swift */; };
 		B9D3F0EA246DFAED0039F662 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F0E9246DFAED0039F662 /* SceneDelegate.swift */; };
 		B9D3F0EE246DFAEE0039F662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9D3F0ED246DFAEE0039F662 /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 		B9D3F101246E4B2E0039F662 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F100246E4B2E0039F662 /* AppState.swift */; };
 		B9D3F103246E4C440039F662 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3F102246E4C440039F662 /* TodoListView.swift */; };
 		B9DBBD57246E6FCA002A5571 /* TodoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DBBD56246E6FCA002A5571 /* TodoItemView.swift */; };
+		B9DBBD59246E8B2C002A5571 /* TodoEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DBBD58246E8B2C002A5571 /* TodoEditView.swift */; };
+		B9DBBD5B246EA7C8002A5571 /* Priority+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DBBD5A246EA7C8002A5571 /* Priority+Label.swift */; };
 		C020556265C54E748EFD6FCD /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C732A8F91D44720A8E252E1 /* Priority.swift */; };
 		D8BCAEACA0FB6E82E665577E /* Pods_TodoAmplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA718BC6909C32F787A7DE51 /* Pods_TodoAmplify.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +38,7 @@
 		825DAAD59551439393EF0AEF /* Todo+Schema.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "Todo+Schema.swift"; path = "amplify/generated/models/Todo+Schema.swift"; sourceTree = "<group>"; };
 		8DF93209F53349E0A61B57EE /* schema.graphql */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text; name = schema.graphql; path = amplify/backend/api/amplifyDatasource/schema.graphql; sourceTree = "<group>"; };
 		B858E7E71D784A9EA3DC4ED1 /* Todo.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Todo.swift; path = amplify/generated/models/Todo.swift; sourceTree = "<group>"; };
+		B93D0FD7246F653D00796879 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 		B9D3F0E4246DFAED0039F662 /* TodoAmplify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoAmplify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D3F0E7246DFAED0039F662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9D3F0E9246DFAED0039F662 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 		B9D3F100246E4B2E0039F662 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B9D3F102246E4C440039F662 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		B9DBBD56246E6FCA002A5571 /* TodoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemView.swift; sourceTree = "<group>"; };
+		B9DBBD58246E8B2C002A5571 /* TodoEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEditView.swift; sourceTree = "<group>"; };
+		B9DBBD5A246EA7C8002A5571 /* Priority+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Priority+Label.swift"; sourceTree = "<group>"; };
 		EA718BC6909C32F787A7DE51 /* Pods_TodoAmplify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoAmplify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,6 +145,7 @@
 		B9D3F0FE246E4A180039F662 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B9DBBD58246E8B2C002A5571 /* TodoEditView.swift */,
 				B9DBBD56246E6FCA002A5571 /* TodoItemView.swift */,
 				B9D3F102246E4C440039F662 /* TodoListView.swift */,
 			);
@@ -149,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				B9D3F100246E4B2E0039F662 /* AppState.swift */,
+				B9DBBD5A246EA7C8002A5571 /* Priority+Label.swift */,
+				B93D0FD7246F653D00796879 /* TodoViewModel.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -316,10 +325,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93D0FD8246F653D00796879 /* TodoViewModel.swift in Sources */,
 				B9D3F0E8246DFAED0039F662 /* AppDelegate.swift in Sources */,
+				B9DBBD5B246EA7C8002A5571 /* Priority+Label.swift in Sources */,
 				B9D3F0EA246DFAED0039F662 /* SceneDelegate.swift in Sources */,
 				B9D3F101246E4B2E0039F662 /* AppState.swift in Sources */,
 				B9D3F103246E4C440039F662 /* TodoListView.swift in Sources */,
+				B9DBBD59246E8B2C002A5571 /* TodoEditView.swift in Sources */,
 				47E22E329454459593B1BAEF /* AmplifyModels.swift in Sources */,
 				B9DBBD57246E6FCA002A5571 /* TodoItemView.swift in Sources */,
 				C020556265C54E748EFD6FCD /* Priority.swift in Sources */,

@@ -9,22 +9,29 @@ struct TodoItemView: View {
         "checkmark.circle" + (todo.done ? ".fill" : "")
     }
 
+    private var todoNavigationLink: some View {
+        TodoEditView(todo: TodoViewModel(from: todo))
+            .environmentObject(appState)
+    }
+
     var body: some View {
-        HStack {
-            Image(systemName: self.todoDoneIconName)
-                .onTapGesture(perform: self.onDoneTap)
-                .font(.system(size: 28, weight: .thin))
-                .padding(.trailing, 4)
-                .foregroundColor(.orange)
-            VStack {
-                Text(todo.name)
-                    .strikethrough(todo.done)
-                    .foregroundColor(todo.done ? .secondary : .primary)
-                    .lineLimit(1)
+        NavigationLink(destination: self.todoNavigationLink) {
+            HStack {
+                Image(systemName: self.todoDoneIconName)
+                    .onTapGesture(perform: self.onDoneTap)
+                    .font(.system(size: 28, weight: .thin))
+                    .padding(.trailing, 4)
+                    .foregroundColor(.accentColor)
+                VStack {
+                    Text(todo.name)
+                        .strikethrough(todo.done)
+                        .foregroundColor(todo.done ? .secondary : .primary)
+                        .lineLimit(1)
+                }
             }
+            .padding(.vertical, 8)
+            .contextMenu(menuItems: self.buildContextMenu)
         }
-        .padding(.vertical, 8)
-        .contextMenu(menuItems: self.buildContextMenu)
     }
 
     private func onDoneTap() {

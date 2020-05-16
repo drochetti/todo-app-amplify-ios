@@ -12,7 +12,7 @@ final class AppState: ObservableObject {
             Amplify.DataStore.query(Todo.self) {
                 switch $0 {
                 case let .success(result):
-                    self.todos.append(contentsOf: result)
+                    self.todos = result
                 case let .failure(error):
                     print("Error querying todos")
                     print(error)
@@ -42,12 +42,16 @@ final class AppState: ObservableObject {
     func toggleDone(on todo: Todo) {
         var updatedTodo = todo
         updatedTodo.done = !todo.done
+        saveTodo(updatedTodo)
+    }
+
+    func saveTodo(_ todo: Todo) {
         DispatchQueue.main.async {
-            Amplify.DataStore.save(updatedTodo) {
+            Amplify.DataStore.save(todo) {
                 switch $0 {
                 case .success:
                     if let index = self.todos.firstIndex(where: { $0.id == todo.id }) {
-                        self.todos[index] = updatedTodo
+                        self.todos[index] = todo
                     } else {
                         print("Warning: could not find existing item with id \(todo.id)")
                     }
@@ -61,7 +65,8 @@ final class AppState: ObservableObject {
 
     // MARK: Delete
 
-    func deleteTodo(withId id: String) {
+    typealias DeleteTodoResult = (Result<Void, Error>) -> Void
+    func deleteTodo(withId id: String, onResult: DeleteTodoResult? = nil) {
         DispatchQueue.main.async {
             Amplify.DataStore.delete(Todo.self, withId: id) {
                 switch $0 {
@@ -71,9 +76,9 @@ final class AppState: ObservableObject {
                     } else {
                         print("Warning: could not find existing item with id \(id)")
                     }
+                    onResult?(.successfulVoid)
                 case let .failure(error):
-                    print("Error deleting todo")
-                    print(error)
+                    onResult?(.failure(error))
                 }
             }
         }

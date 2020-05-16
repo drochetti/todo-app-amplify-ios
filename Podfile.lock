@@ -67,13 +67,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Amplify:
-    :commit: 67412ca1513057f7f6e473f37ec9b89230642655
+    :commit: 6a5b90d57064a6f556bab34ecfe09fbd5304fa39
     :git: https://github.com/aws-amplify/amplify-ios.git
   AmplifyPlugins:
-    :commit: 67412ca1513057f7f6e473f37ec9b89230642655
+    :commit: 6a5b90d57064a6f556bab34ecfe09fbd5304fa39
     :git: https://github.com/aws-amplify/amplify-ios.git
   AWSPluginsCore:
-    :commit: 67412ca1513057f7f6e473f37ec9b89230642655
+    :commit: 6a5b90d57064a6f556bab34ecfe09fbd5304fa39
     :git: https://github.com/aws-amplify/amplify-ios.git
 
 SPEC CHECKSUMS:
