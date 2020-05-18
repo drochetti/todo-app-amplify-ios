@@ -7,6 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let isConfigured = configureAmplify()
+        print("DB Path = \(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first)")
         return isConfigured
     }
 
@@ -28,7 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func configureAmplify() -> Bool {
         do {
+            Amplify.Logging.logLevel = .verbose
+            try Amplify.add(plugin: AWSAPIPlugin(modelRegistration: AmplifyModels()))
             try Amplify.add(plugin: AWSDataStorePlugin(modelRegistration: AmplifyModels()))
+
             try Amplify.configure()
             return true
         } catch {

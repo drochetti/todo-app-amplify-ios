@@ -1,4 +1,5 @@
 import Amplify
+import Combine
 import SwiftUI
 
 final class AppState: ObservableObject {
@@ -9,10 +10,10 @@ final class AppState: ObservableObject {
 
     func loadTodos() {
         DispatchQueue.main.async {
-            Amplify.DataStore.query(Todo.self) {
+            Amplify.DataStore.query(Todo.self, paginate: .page(0, limit: 50)) {
                 switch $0 {
                 case let .success(result):
-                    self.todos = result
+                    self.todos = result.reversed()
                 case let .failure(error):
                     print("Error querying todos")
                     print(error)
@@ -82,5 +83,11 @@ final class AppState: ObservableObject {
                 }
             }
         }
+    }
+
+    // MARK: Subscribe
+
+    func subscribe() -> AnyPublisher<MutationEvent, DataStoreError> {
+        return Amplify.DataStore.publisher(for: Todo.self)
     }
 }

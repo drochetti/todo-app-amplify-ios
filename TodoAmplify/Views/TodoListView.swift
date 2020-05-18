@@ -29,9 +29,9 @@ struct TodoListView: View {
                     .environmentObject(self.appState)
             }
         }
-        .navigationBarTitle(Text("My Todo List"))
+        .navigationBarTitle(Text("Todo List (\(self.appState.todos.count))"))
         .onAppear {
-            self.appState.loadTodos()
+            self.onLoad()
         }
     }
 
@@ -48,10 +48,33 @@ struct TodoListView: View {
             Button(action: { self.loader.generateTodos(count: 1000) }) {
                 Text("Add 1,000 items")
             }
+            Button(action: { self.loader.generateTodos(count: 10000) }) {
+                Text("Add 10,000 items")
+            }
+            Button(action: { self.loader.generateTodos(count: 100_000) }) {
+                Text("Add 100,000 items")
+            }
         }
     }
 
     // MARK: View Events
+
+    private func onLoad() {
+        appState.loadTodos()
+        let queue = DispatchQueue.global(qos: .background)
+        let start = DispatchTime.now()
+        _ = appState.subscribe()
+            .subscribe(on: queue)
+            .sink(receiveCompletion: { print($0) }) { event in
+                print("------------")
+                print("event = \(event)")
+                let elapsed = Double(DispatchTime.now().uptimeNanoseconds - start.uptimeNanoseconds) / 1_000_000_000
+                print("elapsedTime = \(elapsed) seconds")
+                DispatchQueue.main.async {
+                    self.appState.loadTodos()
+                }
+            }
+    }
 
     private func onAddTodo() {
         if !todoDraft.isEmpty {
