@@ -6,11 +6,10 @@ target 'TodoAmplify' do
   use_frameworks!
 
   # Pods for TodoAmplify
-  pod 'Amplify', :git => 'https://github.com/aws-amplify/amplify-ios.git', :branch => 'master'
-  pod 'Amplify/Tools', :git => 'https://github.com/aws-amplify/amplify-ios.git', :branch => 'master'
-  pod 'AWSPluginsCore', :git => 'https://github.com/aws-amplify/amplify-ios.git', :branch => 'master'
-  pod 'AmplifyPlugins/AWSAPIPlugin', :git => 'https://github.com/aws-amplify/amplify-ios.git', :branch => 'master'
-  pod 'AmplifyPlugins/AWSDataStorePlugin', :git => 'https://github.com/aws-amplify/amplify-ios.git', :branch => 'master'
+  pod 'Amplify'
+  pod 'Amplify/Tools'
+  pod 'AmplifyPlugins/AWSAPIPlugin'
+  pod 'AmplifyPlugins/AWSDataStorePlugin'
 
   # Tooling
   pod 'SwiftFormat/CLI'
