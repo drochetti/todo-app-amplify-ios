@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func configureAmplify() -> Bool {
         do {
-            Amplify.Logging.logLevel = .verbose
+//            Amplify.Logging.logLevel = .verbose
             try Amplify.add(plugin: AWSAPIPlugin(modelRegistration: AmplifyModels()))
             try Amplify.add(plugin: AWSDataStorePlugin(modelRegistration: AmplifyModels()))
 

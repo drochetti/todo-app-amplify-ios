@@ -13,7 +13,8 @@ public struct Todo: Model {
                 name: String,
                 done: Bool,
                 priority: Priority? = nil,
-                description: String? = nil) {
+                description: String? = nil)
+    {
         self.id = id
         self.name = name
         self.done = done

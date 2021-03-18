@@ -1,20 +1,20 @@
 {
-    "api": {
-        "amplifyDatasource": {
-            "service": "AppSync",
-            "providerPlugin": "awscloudformation",
-            "output": {
-                "authConfig": {
-                    "additionalAuthenticationProviders": [],
-                    "defaultAuthentication": {
-                        "authenticationType": "API_KEY",
-                        "apiKeyConfig": {
-                            "description": "todoiosapikey",
-                            "apiKeyExpirationDays": "365"
-                        }
-                    }
-                }
+  "api": {
+    "todoamplify": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 365,
+              "description": "todoamplifyapikey"
             }
+          },
+          "additionalAuthenticationProviders": []
         }
+      }
     }
+  }
 }
