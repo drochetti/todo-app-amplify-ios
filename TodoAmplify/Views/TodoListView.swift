@@ -65,7 +65,9 @@ struct TodoListView: View {
         let start = DispatchTime.now()
         _ = appState.subscribe()
             .subscribe(on: queue)
-            .throttle(for: .milliseconds(250), scheduler: RunLoop.current, latest: false)
+            .collect(15)
+//            .debounce(for: .milliseconds(50), scheduler: queue)
+//            .throttle(for: .milliseconds(250), scheduler: queue, latest: false)
             .sink(receiveCompletion: { print($0) }) { event in
                 print("------------")
                 print("event = \(event)")
